@@ -1,0 +1,137 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+:root{
+    --color:#6C5CE7;
+}
+
+*{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100% ;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background:rgba(0,0,0,.3);
+
+
+}
+.header .logo {
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+.header .logo i{
+    padding: 0.5 rem;
+}
+.header .navbar ul{
+    list-style-type:none ;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header .navbar ul li{
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+.header .navbar ul li a{
+    font-size: 2rem;
+    color: #fff;
+    padding: 12px 30px;
+}
+.header .navbar ul li a:hover{
+    border: 1px solid white;
+    font-size: 2rem;
+    color: #ccc;
+    
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background: url(bg2.webp);
+    background-size: cover;
+    background-position:center;
+}
+.header .fa-bars{
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+}
+.home{
+    min-height: 100vh;
+    width: 100vw; 
+    display:flex;
+    align-items: centre;
+    justify-content: centre;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+
+@media (max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    .header .fa-bars{
+        display: block;
+    }
+    .header .navbar{
+        position: fixed;
+        top:-120%;left: 0;
+        height: auto;
+        width: 100%;
+        background-color:#fff;
+        z-index:1000;
+        border-top:1rem solid rgba(0,0,0,.3);
+    }
+    .header .navbar ul{
+        height: 100%;
+        width: 100%;
+        flex-flow: column;
+    }
+    .header .navbar ul li a{
+        color: #444;
+        font-size: 2.4 rem;
+        font-weight: bolder;
+    }
+    .header .fa-times{
+        transform: rotate(180deg);
+    }
+    .header .nav-toggle{
+        top: 5.8rem;
+    }
+}
